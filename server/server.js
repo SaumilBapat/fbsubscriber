@@ -4,7 +4,5 @@ const express = require('express');
 var app = express();
 
 app.get('/', function(req, res) {
-    return res
-        .status(200)
-        .send('App First Page');
+    res.status(200).send('App First Page');
 });
