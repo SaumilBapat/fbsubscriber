@@ -1,8 +1,7 @@
-console.log("Starting Server");
-const express = require('express');
+var express = require('express')
+var app = express()
 
-var app = express();
-
-app.get('/', function(req, res) {
-    res.status(200).send('App First Page');
-});
+// respond with "hello world" when a GET request is made to the homepage
+app.get('/', function (req, res) {
+  res.send('hello world')
+})
