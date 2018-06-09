@@ -1,1 +1,1 @@
-console.log("Facebook subscriber has started");
+console.log("Facebook Subscriber has started");
