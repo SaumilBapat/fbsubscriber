@@ -12,7 +12,7 @@ var app = express();
 
 
 var port = process.env.PORT || 3000;
-app.set('view engine', 'jade');
+
 app.listen(port, () => {
     console.log("Started on port " + port);
 });
@@ -26,7 +26,7 @@ app.get('/db', async (req, res) => {
   try {
     const client = await pool.connect()
     const result = await client.query('SELECT * FROM test_table');
-    res.render('pages/db', result);
+    res.send(result);
     client.release();
   } catch (err) {
     console.error(err);
